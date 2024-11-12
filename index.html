@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Teori</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body class="clean-mode">
+    <h1 id="title">LAPORAN TEORI</h1>
+    <h2 id="subtitle">Nama : Arjen Jezoreth Yawan | NIM: 202331282</h2>
+
+    <h3 class="section-title" onclick="toggleContent('content1')">1. Mengapa kami menggunakan CSS dan JavaScript dalam Pemograman Web?</h3>
+    <p id="content1">CSS adalah salah satu dari dua teknologi penting dalam pengembangan web. CSS digunakan untuk menata dan menata halaman web, yang memberikan estetika sekaligus keterbacaan konten. CSS memungkinkan pengembang web untuk mengontrol elemen-elemen seperti warna, margin, padding, dan tata letak secara konsisten, sehingga meningkatkan pengalaman pengguna. Sementara itu, JavaScript adalah bahasa pemrograman yang memungkinkan pengembang untuk mengontrol dan memanipulasi elemen-elemen pada halaman web secara interaktif. Misalnya, JavaScript dapat digunakan untuk membuat popup, membuat animasi, dan memvalidasi formulir. Tentu saja, ini hanyalah beberapa contoh tentang apa yang dapat dilakukan gabungan CSS dan JS, namun, keduanya seharusnya dapat memberikan gambaran umum. Gabungan keduanya membuat halaman web lebih menarik, efisien, dan ramah pengguna. Sementara CSS memungkinkan struktur menjadi rapi dan seragam, JavaScript menambahkan logika dan interaktivitas ke sisi klien yang berarti di dalam browser pengguna dan tidak mengharuskan halaman web dimuat ulang agar perubahan diterapkan yang meringankan beban di server dan memungkinkan waktu respons yang lebih cepat.</p>
+
+    <h3 class="section-title" onclick="toggleContent('content2')">2. Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web?</h3>
+    <p id="content2">CSS dan JavaScript dapat diintegrasikan ke dalam HTML dengan tiga cara: inline, internal, dan eksternal. Untuk CSS:
+        <br>
+        • Inline CSS diterapkan langsung pada elemen HTML menggunakan atribut style. Sebaiknya hindari penggunaan inline ini kecuali untuk gaya yang sangat sederhana, karena dapat membuat HTML menjadi sulit dibaca.
+        <br>
+        • Internal CSS menggunakan tag  style di dalam file HTML. Ini berguna untuk gaya yang spesifik pada satu halaman, tetapi tidak disarankan untuk proyek yang lebih besar.
+        <br>
+        • Eksternal CSS memisahkan file CSS dari HTML dengan menggunakan file .css. Metode eksternal lebih efisien karena memungkinkan pengembang untuk mengelola semua gaya halaman web di satu tempat, sehingga lebih mudah untuk digunakan kembali dan diatur (W3Schools, 2022).
+        <br>
+        JavaScript juga memiliki tiga metode integrasi yang serupa:
+        • Inline JavaScript menambahkan skrip langsung pada elemen HTML dengan atribut seperti onclick, onchange, dan lainnya. Sama seperti CSS, metode ini jarang direkomendasikan.
+        <br>
+        • Internal JavaScript ditempatkan dalam tag script di bagian head atau body HTML. Ini cocok untuk kode yang spesifik pada satu halaman.
+        <br>
+        • Eksternal JavaScript memisahkan kode ke dalam file .js, yang dapat dihubungkan melalui tag script src="file.js". Metode ini sangat disarankan karena dapat digunakan kembali di banyak halaman web, mempercepat waktu loading, dan meningkatkan pengelolaan kode (MDN Web Docs, 2021).
+        </p>
+
+    <h3 class="section-title" onclick="toggleContent('content3')">3. Jelaskan apa saja keuntungan menggunakan JavaScipt dan CSS?</h3>
+    <p id="content3">Bootstrap adalah framework CSS yang sangat populer dalam pengembangan web karena menyediakan berbagai komponen siap pakai dan memudahkan pembuatan antarmuka pengguna. Manfaatnya adalah sebagai berikut: 
+        <br>
+        1. kecepatan pengembangan, yang mencakup berbagai komponen siap pakai seperti tombol, form, grid, navbar yang dapat digunakan tanpa penyuntingan kode, mempercepat pembuatan prototipe.
+        <br>
+        2. desain responsif, yang berarti elemen UI dan tata letak diatur secara otomatis sesuai dengan ukuran layar browser, memberikan performa maksimal pada perangkat mobile.
+        <br>
+        3. dukungan komunitas, yang berarti banyak tutorial, tema, ekstensi, dan dokumentasi; ini memungkinkan pemula untuk memodifikasi apa pun yang mereka inginkan lebih mudah.
+        </p>
+
+    <h3 class="section-title" onclick="toggleContent('content4')">4. Jelaskan apa saja keuntungan menggunakan JavaScipt dan CSS?</h3>
+    <p id="content4">
+     Bootstrap adalah framework CSS yang sangat terkenal karena menyediakan berbagai komponen desain yang siap digunakan dan memudahkan pengembangan antarmuka pengguna (UI). 
+    Beberapa keuntungan dari Bootstrap antara lain: 
+        <br>
+       •	Kecepatan Pengembangan: Bootstrap menawarkan berbagai komponen siap pakai seperti tombol, formulir, grid, dan navbar yang bisa langsung digunakan tanpa perlu menulis kode dari awal, sehingga mempercepat proses pembuatan prototipe (GetBootstrap, 2022). 
+        <br>
+        •	Desain Responsif: Bootstrap mendukung desain responsif yang secara otomatis menyesuaikan elemen UI pada berbagai ukuran layar, memberikan pengalaman optimal di perangkat mobile. Dukungan Komunitas: Dengan komunitas pengguna yang besar dan dokumentasi yang lengkap, Bootstrap menyediakan banyak tutorial, tema, dan ekstensi. Ini memudahkan pemula untuk memahami dan memodifikasi tampilan yang diinginkan tanpa mengalami banyak kesulitan (Bootstrap Community, 2022).
+    </p>
+    <div class="button-container">
+        <button class="toggle-button" onclick="toggleMode()">Mode</button>
+    </div>
+
+    <script>
+        // Fungsi untuk menyembunyikan dan menampilkan konten
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const userConfirmed = confirm("Apakah Anda ingin menyembunyikan konten dari bagian ini?");
+            if (userConfirmed) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        // Fungsi untuk mengubah antara mode bersih dan berantakan
+        function toggleMode() {
+            document.body.classList.toggle("clean-mode");
+            document.body.classList.toggle("messy-mode");
+
+            const titles = document.querySelectorAll("h1, h2, h3");
+            titles.forEach(title => title.classList.toggle("messy"));
+        }
+    </script>
+</body>
+</html>

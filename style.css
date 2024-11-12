@@ -1,0 +1,93 @@
+
+body.clean-mode {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4A90E2;
+}
+
+h3 {
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-left: 5px solid #4A90E2;
+    transition: background-color 0.3s ease;
+}
+
+h3:hover {
+    background-color: #bbdefb;
+}
+
+p {
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Button for toggling mode */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4A90E2;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #357ABD;
+}
+
+/* Messy Mode Styles */
+body.messy-mode {
+    font-family: "Comic Sans MS", cursive;
+    background-color: #ff69b4;
+    color: #21fbda;
+}
+
+h1.messy, h2.messy {
+    color: #ff4500;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px #000;
+    background-color: #ffff00;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+h3.messy {
+    color: #0000ff;
+    background-color: #ffa500;
+    border-left: 5px solid #ff4500;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #000;
+}
+
+p {
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+p.messy {
+    background-color: #ffdab9;
+    color: #000080;
+    border: 1px dashed #8b0000;
+}
